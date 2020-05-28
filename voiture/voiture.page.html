@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1">
+            <ion-title class="title">Voiture</ion-title>
+          </ion-col>
+          <ion-col size="11" class="news">
+            <ion-slides [options]="slideOptions" #news (ionSlidesDidLoad)="slidesDidLoadNews(news)">
+              <ion-slide class="slidetext">
+                <ion-icon name="star" Color="danger"></ion-icon>
+                <ion-icon name="heart" Color="danger"></ion-icon>
+                <ion-icon name="star" Color="danger"></ion-icon>
+                Location Voiture pas cher avec <ion-icon name="logo-model-s" Color="primary"></ion-icon> FTRC ®. Prix
+                imbattables.
+                <ion-icon name="heart" Color="danger"></ion-icon>
+                <ion-icon name="star" Color="danger"></ion-icon>
+                <ion-icon name="heart" Color="danger"></ion-icon>
+              </ion-slide>
+              <ion-slide class="slidetext">
+                Réservez Online! Informations,
+                <ion-icon name="call" Color="success"></ion-icon>
+                (+216) 25 818 129 || (+216) 71 805 275
+                <ion-icon name="mail" Color="success"></ion-icon> FTRC@hotmail.fr
+              </ion-slide>
+              <ion-slide class="slidetext">
+                <ion-icon name="speedometer" Color="primary"></ion-icon>
+                Rechercher des locations de voitures à partir de 5 € à Bardo. <ion-icon name="thumbs-up"
+                  Color="primary"></ion-icon>
+                Les Meilleurs Loueurs.
+                <ion-icon name="happy" Color="success"></ion-icon>
+
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+         <ion-row>
+           <ion-col size="12" class="tittle"><h1 class="item"> Bienvenue</h1></ion-col>
+         </ion-row>
+  </ion-grid>
+    <ion-grid>
+        <ion-row>
+    
+          
+          <ion-col >
+            <ion-slides [options]="slideOptions" #sym (ionSlidesDidLoad)="slidesDidLoad(sym)">
+              <ion-slide >
+                <img src="/assets/images/symbol/sym1.png" alt="" class="sym" />
+              </ion-slide>
+    
+              <ion-slide>
+                <img src="/assets/images/symbol/sym2.png" alt="" class="sym"   />
+              </ion-slide>
+    
+              <ion-slide>
+                <img src="/assets/images/symbol/sym3.png" alt="" class="sym" />
+              </ion-slide>
+
+              <ion-slide>
+                  <img src="/assets/images/symbol/sym4.png" alt="" class="sym" />
+                </ion-slide>
+
+                <ion-slide>
+                    <img src="/assets/images/symbol/sym5.png" alt="" class="sym" />
+                  </ion-slide>
+
+                  <ion-slide>
+                      <img src="/assets/images/symbol/sym6.png" alt="" class="sym" />
+                    </ion-slide>
+
+                    <ion-slide>
+                        <img src="/assets/images/symbol/sym7.png" alt="" class="sym" />
+                      </ion-slide>
+            </ion-slides>
+          </ion-col>
+    
+        </ion-row>
+      </ion-grid>
+     
+
+  <ion-card class="card" text-warp *ngFor="let voiture of voitures">
+    <img src="/assets/images/voiture/ford.png" alt="" />
+    <ion-card-header>
+      <ion-card-subtitle>
+        <h1 class="subtitle"> voiture : {{voiture._source.nomVoiture}} </h1>
+      </ion-card-subtitle>
+      <ion-card-title>Matrecule : {{voiture._source.matrecule}}</ion-card-title>
+    </ion-card-header>
+    <div *ngIf="voiture._source.mode == 'libre' ">
+      <ion-card-content class="mode">
+        Mode (Loué / libre) : <h1 class="priver">{{voiture._source.mode}}</h1>
+      </ion-card-content>
+
+      <ion-button fill="clear" [routerLink]="'/reservation/'+voiture._id">Réservation <ion-icon slot="end"
+          name="arrow-forward"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div *ngIf="voiture._source.mode == 'louer' ">
+      <ion-card-content class="mode">
+        Mode (Loué / libre) : <h1 class="louer">{{voiture._source.mode}}</h1>
+      </ion-card-content>
+
+      <ion-button fill="clear" (click)='modeVoiture()'>Réservation <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-col>
+      <ion-button (click)="redirectToDelete(voiture._id)" color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button [routerLink]="'/update-voiture/'+voiture._id">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+  </ion-card>
+  
+</ion-content>

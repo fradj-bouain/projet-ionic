@@ -1,0 +1,50 @@
+<ion-app >
+  <ion-menu side="start" type="overlay" contentId="content1">
+    <ion-header>
+      <ion-toolbar translucent class="toolLogo">
+        <ion-title> <img src="../../assets/images/logo.png" alt="FTRC" class="logo" /> </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-buttons slot="secondary">
+          <ion-button>
+            <ion-icon slot="icon-only" name="notifications">1
+            </ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <img src="../../assets/images/logo.png" alt="FTRC" class="person" />
+        <ion-title class="title">{{ username }}</ion-title>
+
+        <ion-buttons slot="primary">
+          <ion-button (click)='disconnect()'>
+            <ion-icon slot="icon-only" name="power" class="icon"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-item  *ngIf="p.title != 'Ajouter Voiture' && username != 'admin'  " [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-icon slot="start" [name]="p.icon"></ion-icon>
+            <ion-label>
+              {{p.title}}
+            </ion-label>
+          </ion-item>
+
+          <ion-item  *ngIf="username == 'admin'  " [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet  id="content1" main></ion-router-outlet>
+
+
+</ion-app>

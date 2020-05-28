@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1">
+            <ion-title class="title">Propos</ion-title>
+          </ion-col>
+          <ion-col size="11" class="news">
+            <ion-slides [options]="slideOptions" #news (ionSlidesDidLoad)="slidesDidLoadNews(news)">
+              <ion-slide class="slidetext">
+                <ion-icon name="star" Color="danger"></ion-icon>
+                <ion-icon name="heart" Color="danger"></ion-icon>
+                <ion-icon name="star" Color="danger"></ion-icon>
+                Location Voiture pas cher avec
+                <ion-icon name="logo-model-s" Color="primary"></ion-icon>
+                FTRC ®. Prix imbattables.
+                <ion-icon name="heart" Color="danger"></ion-icon>
+                <ion-icon name="star" Color="danger"></ion-icon>
+                <ion-icon name="heart" Color="danger"></ion-icon>
+              </ion-slide>
+              <ion-slide class="slidetext">
+                Réservez Online! Informations,
+                <ion-icon name="call" Color="success"></ion-icon>
+                (+216) 25 818 129 || (+216) 71 805 275
+                <ion-icon name="mail" Color="success"></ion-icon> FTRC@hotmail.fr
+              </ion-slide>
+              <ion-slide class="slidetext">
+                <ion-icon name="speedometer" Color="primary"></ion-icon>
+                Rechercher des locations de voitures à partir de 5 € à Bardo.<ion-icon name="thumbs-up" Color="primary">
+                </ion-icon>
+                Les Meilleurs Loueurs.
+                <ion-icon name="happy" Color="success"></ion-icon>
+
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1 class="tittle">Location de Voiture Populaire </h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-icon class="icon" name="information-circle-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <p class="desc">
+          Tunisie cars est l´une des premières agences de location de voiture en Tunisie, avec plus de 20 ans
+          d´expérience sur
+          le marché Tunisien, notre agence s´est forgée une forte notoriété en tant que spécialiste dans la location de
+          voiture et ce partout en Tunisie.
+          Si vous désirez louer une voiture pour vos vacances en Tunisie, nous mettons à votre service une flotte de
+          véhicules
+          de toutes les marques et les tailles avec des points de réception et de retour depuis et vers l'aéroport et
+          aussi
+          les régions de la Tunisie.
+          Si vous descendez à l´aéroport de Tunis Carthage ou d´Enfidha, nous assurons votre transport en vous
+          rapportant la
+          voiture de votre choix jusqu´à vous.
+        </p>
+        <p class="desc">
+          Des vacances de rêve. Sans la contrainte du transport. Voilà ce que notre agence de location de voitures vous
+          propose. Disposant d’un grand parc automobile réunissant toutes sortes de véhicules de location : premiums,
+          citadines, utilitaires et voitures de luxe, Avantgarde arrive à satisfaire une clientèle des plus exigeantes.
+          Nous
+          accordons la plus grande importance aux horaires de livraisons et à l’état de nos voitures de location. Nous
+          veillons toujours à leur bon entretien. C’est ce qui fait le fort d’Avantgarde. Vous pouvez avoir votre devis
+          de
+          location de voiture et faire la réservation de votre véhicule en ligne. Nous nous chargeons de tout planifier
+          et de
+          vous livrer votre véhicule. Ou, si vous préférez, vous pouvez vous adresser à notre agence située au sein de
+          l’aéroport de Tunis Carthage et louer le véhicule que vous souhaitez sur place.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

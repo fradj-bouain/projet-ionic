@@ -1,0 +1,102 @@
+<ion-content force-overscroll="false">
+    <ion-grid >
+        <ion-row>
+  <gl-background-video src="assets/location_voiture.mp4">
+  </gl-background-video>
+  </ion-row>
+  </ion-grid>
+  <div class="page-centered-element">
+    <div class="content">
+      <ion-grid class="formulair">
+          <img src="../../assets/images/logo.png" class="logo" alt="FTRC" height="150px" width="200px" />
+        <ion-row>
+          <ion-col size="12" size-lg>
+
+            <ion-slides [options]="slideOptions" #sld>
+              <ion-slide>
+                <form [formGroup]="user" (ngSubmit)="login()">
+                  <ion-item class="col">
+                    <ion-label>Username</ion-label>
+                    <ion-input type="text" formControlName="username"></ion-input>
+                  </ion-item>
+                  <ion-item class="col">
+                    <ion-label>Password</ion-label>
+                    <ion-input type="password" formControlName="password"></ion-input>
+                  </ion-item>
+                  <div class="buttons-container">
+                    <ion-button type="submit">Login</ion-button>
+                    <ion-button fill="clear" (click)='slidesDidLoadInsc(sld)'>Insecri vous <ion-icon slot="end"
+                        name="arrow-forward"></ion-icon>
+                    </ion-button>
+                  </div>
+                </form>
+
+              </ion-slide>
+
+
+              <ion-slide class="login">
+                <form [formGroup]="ajouterUser" (ngSubmit)="addUser()">
+                  <h2 class="tittle1">Entrer Votre Information </h2>
+                  <ion-item class="col">
+                    <ion-label>Username</ion-label>
+                    <ion-input type="text" formControlName="username"></ion-input>
+                  </ion-item>
+                  <ion-item class="col">
+                    <ion-label>Email</ion-label>
+                    <ion-input type="text" formControlName="email"></ion-input>
+                  </ion-item>
+                  <ion-item class="col">
+                    <ion-label>Password</ion-label>
+                    <ion-input type="password" formControlName="password"></ion-input>
+                  </ion-item>
+                  <div class="buttons-container">
+                    <ion-button fill="clear" (click)='slidesDidLoadLogin(sld)'><ion-icon slot="end"
+                      name="arrow-back"></ion-icon> Login 
+                    </ion-button>
+                    <ion-button type="submit">Inscri</ion-button>
+                  </div>
+                </form>
+              </ion-slide>
+
+            </ion-slides>
+
+
+            <ion-slides class="slides" [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+
+              <ion-slide>
+                <img src="../../assets/images/voiture/acura.png" class="slide" />
+              </ion-slide>
+              <ion-slide>
+                <img src="../../assets/images/voiture/ford.png" class="slide" />
+              </ion-slide>
+              <ion-slide>
+                <img src="../../assets/images/voiture/nissan.png" class="slide" />
+              </ion-slide>
+              <ion-slide>
+                <img src="../../assets/images/voiture/bentley.png" class="slide" />
+              </ion-slide>
+              <ion-slide>
+                <img src="../../assets/images/voiture/chrysler.png" class="slide" />
+              </ion-slide>
+              <ion-slide>
+                <img src="../../assets/images/voiture/lada.png" class="slide" />
+              </ion-slide>
+              <ion-slide>
+                <img src="../../assets/images/voiture/hyundai.png" class="slide" />
+              </ion-slide>
+              <ion-slide>
+                <img src="../../assets/images/voiture/citroen.png" class="slide" />
+              </ion-slide>
+            </ion-slides>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+  </div>
+
+
+
+
+</ion-content>

@@ -1,0 +1,76 @@
+ion-content {
+    --background: url('/assets/images/bck/bck1.jpg') no-repeat fixed 60% 60%;
+}
+
+.formulair{
+ 
+  width: 700px;
+  height:400px;
+  margin-top: 30px;
+   
+}
+.col{
+    background-color: blue;
+    margin-top: 50px; 
+  
+    
+}
+
+.tittle{
+    color: aliceblue;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+
+.tittle1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+
+ion-toolbar{
+    --background: rgb(78, 78, 78);
+    --ion-color-base: transparent !important;
+}
+
+  /* //////////////////////////
+           NEWS 
+   ///////////////////////// */    
+
+.news{
+    background: black;
+    font-size: 15px;
+    color: white;
+
+}
+ion-buttons{
+    color: aliceblue;
+
+}
+.title{
+    color: aliceblue;
+}
+
+@media only screen and (max-width: 600px) {
+    .slidetext{
+        font-size: 10px;
+    }
+    .tittle{
+        color: aliceblue;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;   
+    }
+    .tittle1{
+        color: aliceblue;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 60px;
+    }
+  }

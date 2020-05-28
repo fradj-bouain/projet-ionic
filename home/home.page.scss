@@ -1,0 +1,162 @@
+
+/* //////////////////////////
+       Grid 1 
+   ///////////////////////// */    
+
+
+   .grid-bck{
+    background-color: rgb(0, 0, 0);
+    
+}
+
+
+
+.swiper-slide {
+    display: block;
+  }
+  ion-slide > h2 {
+    margin-top: 2.8rem;
+    color: aliceblue;
+  }
+  ion-slide > img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0px 0;
+  }
+  ion-slide > p {
+      color: aliceblue;
+  }
+
+  /* //////////////////////////
+       Grid 2 
+   ///////////////////////// */    
+
+   .grid-list{
+    background-color: rgb(114, 112, 112);
+    
+}
+.card{
+    max-width: 350px;
+    max-height: 440px;
+    min-width: 350px;
+    min-height: 440px;
+    display: inline-block;
+    background-color: rgb(236, 231, 231);
+
+
+}
+
+ion-card > img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+ion-toolbar{
+    --background: rgb(78, 78, 78);
+    --ion-color-base: transparent !important;
+}
+
+ion-content {
+    --background: url('/assets/images/bck/bck-voiture3.jpg') no-repeat fixed 60% ;
+}
+
+  /* //////////////////////////
+           NEWS 
+   ///////////////////////// */    
+
+.news{
+    background: black;
+    font-size: 15px;
+    color: white;
+
+}
+ion-buttons{
+    color: aliceblue;
+
+}
+.title{
+    color: aliceblue;
+}
+.slide{
+    max-height: 600px
+}
+.part{
+    height:600px; 
+    width:350px;
+}
+.part1{
+    height:98%; 
+    width:100%;
+}
+
+
+  ////////////////////////////////   Extra small devices (phones, 600px and down) //////////////////////
+
+  @media only screen and (max-width: 300px) {
+    .slidetext{
+        font-size: 10px;
+    }
+    .colpub{
+       
+    }
+    .rowpub{
+        display: inline;
+
+    }
+    .part{
+        height:500px; 
+        width:500px;
+    }
+    .part1{
+        height:300px; 
+        width:300px;
+     
+    }
+    .card{
+        max-width: 350px;
+        max-height: 440px;
+        min-width: 300px;
+        min-height: 440px;
+        display: inline-block;
+        background-color: rgb(236, 231, 231);
+    
+    
+    }
+  }
+
+  
+  ////////////////////////////////   Extra small devices (phones, 00px and down) //////////////////////
+
+  @media only screen and (max-width: 600px) {
+    .slidetext{
+        font-size: 10px;
+    }
+    .colpub{
+       
+    }
+    .rowpub{
+        display: inline;
+
+    }
+    .part{
+        height:500px; 
+        width:500px;
+    }
+    .part1{
+        height:300px; 
+        width:300px;
+     
+    }
+    .card{
+        max-width: 350px;
+        max-height: 440px;
+        min-width: 300px;
+        min-height: 440px;
+        display: inline-block;
+        background-color: rgb(236, 231, 231);
+    
+    
+    }
+  }

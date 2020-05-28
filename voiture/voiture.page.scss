@@ -1,0 +1,114 @@
+.card{
+   max-width: 360px;
+    max-height: 500px;
+    display: inline-block;
+    background-color: rgb(236, 231, 231);
+
+}
+
+ion-card > img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0px 0;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+ion-toolbar{
+    --background: rgb(78, 78, 78);
+    --ion-color-base: transparent !important;
+}
+
+.subtitle{
+
+    font-size: 10;
+    color: black
+
+}
+
+.mode{
+    font-size: 20px;
+    color: black;
+}
+.priver{
+    display: inline-block;
+    color: green
+}
+.louer{
+    display: inline-block;
+    color: red
+}
+.button{
+    display: inline-block;
+}
+
+ion-content {
+    --background: url('/assets/images/bck/bck-voiture3.jpg') no-repeat fixed 60% ;
+}
+
+  /* //////////////////////////
+           NEWS 
+   ///////////////////////// */    
+
+.news{
+    background: black;
+    font-size: 15px;
+    color: white;
+
+}
+ion-buttons{
+    color: aliceblue;
+
+}
+.title{
+    color: aliceblue;
+}
+
+.slide{
+    max-height: 60px
+}
+.sym{
+    max-height: 200px;
+    max-width: 200px;
+    margin-top: 50px
+}
+
+.item {
+   --background: transparent;    
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+
+ }
+ .tittle{
+    margin-top: 10px;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .slidetext{
+        font-size: 10px;
+    }
+   
+    .sym{
+        max-height: 150px;
+        max-width: 150px;
+        margin-top: 50px
+    }
+    
+    .card{
+        max-width: 350px;
+        max-height: 440px;
+        min-width: 300px;
+        min-height: 440px;
+        display: inline-block;
+        background-color: rgb(236, 231, 231);
+        
+    
+    
+    }
+  }

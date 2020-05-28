@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>reservation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image" no-scroll padding>
+  <h2 class="tittle">Louer Un Voiture</h2>
+  <form [formGroup]="ajouter" (ngSubmit)="add()">
+    <ion-grid class="formulair">
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <h2 class="tittle1">Détails de location </h2>
+          <ion-item class="col">
+            <ion-label>Voiture</ion-label>
+            <ion-input type="text" formControlName="voiture" [value]="voitureName"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Matrecule</ion-label>
+            <ion-input type="text" formControlName="matrecule" [value]="matrecule"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Date prise</ion-label>
+            <ion-input type="Date" formControlName="datePrise"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Date remise</ion-label>
+            <ion-input type="Date" formControlName="dateRemise"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Image</ion-label>
+            <ion-input type="file" accept="image/*" id="upload" [(ngModel)]="imageFilePath"
+              (change)="uploadFile($event.target.files)" formControlName="image"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <h2 class="tittle1">Informations du conducteur </h2>
+          <ion-item class="col">
+            <ion-label>Nom </ion-label>
+            <ion-input type="text" formControlName="nom"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Prénom </ion-label>
+            <ion-input type="text" formControlName="prenom"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Age </ion-label>
+            <ion-input type="text" formControlName="age"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Email </ion-label>
+            <ion-input type="text" formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Adresse: </ion-label>
+            <ion-input type="text" formControlName="adresse"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Tél </ion-label>
+            <ion-input type="number" formControlName="tel"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Ville </ion-label>
+            <ion-input type="text" formControlName="ville"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" size-lg>
+          <ion-item class="col">
+            <ion-label>Code postal </ion-label>
+            <ion-input type="number" formControlName="codePostal"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-button type="submit" class="col">Reserver</ion-button>
+    </ion-grid>
+  </form>
+
+
+</ion-content>

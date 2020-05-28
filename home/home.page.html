@@ -1,0 +1,179 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1">
+            <ion-title class="title">Home</ion-title>
+          </ion-col>
+          <ion-col size="11" class="news">
+            <ion-slides [options]="slideOptions2" #news (ionSlidesDidLoad)="slidesDidLoadNews(news)">
+              <ion-slide  class="slidetext">
+                <ion-icon name="star" Color="danger"></ion-icon>
+                <ion-icon name="heart" Color="danger"></ion-icon>
+                <ion-icon name="star" Color="danger"></ion-icon>
+                Location Voiture pas cher avec <ion-icon name="logo-model-s" Color="primary"></ion-icon> FTRC ®. Prix
+                imbattables.
+                <ion-icon name="heart" Color="danger"></ion-icon>
+                <ion-icon name="star" Color="danger"></ion-icon>
+                <ion-icon name="heart" Color="danger"></ion-icon>
+              </ion-slide>
+              <ion-slide  class="slidetext">
+                Réservez Online! Informations,
+                <ion-icon name="call" Color="success"></ion-icon>
+                (+216) 25 818 129 || (+216) 71 805 275
+                <ion-icon name="mail" Color="success"></ion-icon> FTRC@hotmail.fr
+              </ion-slide>
+              <ion-slide  class="slidetext">
+                <ion-icon name="speedometer" Color="primary"></ion-icon>
+                Rechercher des locations de voitures à partir de 5 € à Bardo.<ion-icon name="thumbs-up" Color="primary">
+                </ion-icon>
+                Les Meilleurs Loueurs.
+                <ion-icon name="happy" Color="success"></ion-icon>
+
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div  class="backround">
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="light">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-grid class="grid-bck">
+    <ion-row>
+      <ion-col size="12" size-lg>
+        <ion-slides pager="true">
+
+          <ion-slide>
+            <img src="/assets/images/bck/bck1.jpg" alt="" />
+            <h2>Bienvenue à <b>Location de Voiture Populaire</b></h2>
+            <p>Le <b>Location de Voiture Populaire app</b> Le plus grand service de réservation de locations de voitures
+              au monde.</p>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/images/bck/bck4.jpg" alt="" />
+            <h2>Ce quoi ?</h2>
+            <p><b>LVP</b> Location de voitures - Recherchez, comparez et faites de vraies économies !.</p>
+          </ion-slide>
+          <ion-slide>
+            <img src="/assets/images/bck/bck2.jpg" alt="" />
+
+            <p> Différentes sociétés de location de voitures ont des exigences différentes, assurez-vous donc de
+              consulter les conditions de vente du véhicule..</p>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/images/bck/bck3.jpg" alt="" />
+            <h2>Réserver Maintenant ?</h2>
+            <ion-button fill="clear">Réservation <ion-icon slot="end" name="arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-slide>
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row  class="rowpub">
+
+        <ion-col size="3" class="colpub">
+            <ion-slides [options]="slideOptions" #pub1 (ionSlidesDidLoad)="slidesDidLoad(pub1)">
+              <ion-slide class="slide">
+                <img src="/assets/part1.jpg" alt="" class="part" />
+              </ion-slide>
+    
+              <ion-slide>
+                <img src="/assets/part2.jpg" alt="" class="part"  />
+              </ion-slide>
+    
+              <ion-slide>
+                <img src="/assets/part3.jpg" alt="" class="part"  />
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+    
+        <ion-col size="6"  class="colpub">
+                <img src="/assets/location-voiture.jpg" alt="" class="part1"  />
+              </ion-col>
+
+      
+
+      <ion-col size="3"  class="colpub">
+        <ion-slides [options]="slideOptions" #pub2 (ionSlidesDidLoad)="slidesDidLoad(pub2)">
+          <ion-slide class="slide">
+            <img src="/assets/part1.jpg" alt="" class="part" />
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/part2.jpg" alt="" class="part"  />
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/part3.jpg" alt="" class="part" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+ 
+  <ion-grid >
+  <ion-card class="card" text-warp *ngFor="let voiture of voitures">
+    <img src="../../assets/images/voiture/ford.png" alt="" />
+    <ion-card-header>
+      <ion-card-subtitle>Nom : {{voiture._source.nom}}</ion-card-subtitle>
+      <ion-card-title>Voiture : {{voiture._source.voiture}}</ion-card-title>
+      <ion-card-title>Matrecule : {{voiture._source.matrecule}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Date prise: {{voiture._source.datePrise}} / Date remise: {{voiture._source.dateRemise}}
+    </ion-card-content>
+    <ion-col *ngIf="username == voiture._source.nom  ">
+      <ion-button (click)="redirectToDelete(voiture._id , voiture._source.matrecule, voiture._source.voiture)"
+        color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col *ngIf="username == 'admin'  ">
+      <ion-button (click)="redirectToDelete(voiture._id , voiture._source.matrecule, voiture._source.voiture)"
+        color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-col>
+   
+   
+  </ion-card>
+</ion-grid>
+
+
+</div>
+</ion-content>

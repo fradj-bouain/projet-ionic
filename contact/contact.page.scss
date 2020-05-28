@@ -1,0 +1,91 @@
+ion-content {
+    --background: url('/assets/images/bck/bck-voiture3.jpg') no-repeat fixed 60% ;
+}
+
+.bicon1{
+    background-color: rgb(10, 14, 240);
+    height: 200px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    
+}
+.bicon2{
+    background-color: rgb(223, 15, 15);
+    height: 200px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    
+}
+.bicon3{
+    background-color: rgb(113, 114, 219);
+    height: 200px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    
+}
+.bicon4{
+    background-color: rgb(16, 173, 29);
+    height: 200px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    
+}
+.icon1{
+    height: 200px;
+    width: 200px;
+    margin-left: 60px;
+}
+.social{
+    margin: 100px 0px  0 250px  ;
+}
+.tittle{
+    font-size: 70px;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+ion-toolbar{
+    --background: rgb(78, 78, 78);
+    --ion-color-base: transparent !important;
+}
+
+  /* //////////////////////////
+           NEWS 
+   ///////////////////////// */    
+
+.news{
+    background: black;
+    font-size: 15px;
+    color: white;
+
+}
+ion-buttons{
+    color: aliceblue;
+
+}
+.title{
+    color: aliceblue;
+}
+
+@media only screen and (max-width: 600px) {
+    .slidetext{
+        font-size: 10px;
+    }
+  .tittle{
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+  }
+  .grid{
+    display: inline;
+
+  }
+  .row{
+    display: inline;
+
+  }
+
+  }

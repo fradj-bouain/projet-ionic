@@ -1,0 +1,229 @@
+.page-centered-element {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+  
+    .buttons-container {
+      margin-top: 30px;
+    }
+    ion-button{
+        width: 300px;
+    }
+  }
+
+  ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    }
+
+
+ .vidio{
+     height: 100%;
+     width: 100%;
+ }
+ .col{
+    backface-visibility:hidden;
+    width: 300px;
+    display: inline-block;
+    
+
+ }
+
+ ion-item {
+    --background: transparent;
+    --background:rgba(255,255,255,.1);
+
+ }
+ .tittle{
+     font-size: 50px;
+     background: rgba(0, 0, 0, 0.5);
+ }
+
+
+ ///////////////////////////////////////@at-root/////////////
+
+ page-login {
+
+  font-family: 'Avenir', sans-serif;
+
+  video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+  }
+
+  ion-slides {
+      height: 200px;
+     
+      bottom: 0;
+
+      ion-slide  {
+        width: 50px;
+          color: #fff;
+        
+      }
+
+      h4 {
+          font-weight: bold;
+      }
+
+    
+  }
+
+  button {
+      font-weight: bold;
+  }
+
+}
+.slide{
+  max-width: 200px;
+  max-height: 200px;
+  
+}
+
+
+@media only screen and (max-width: 600px )and (max-height : 700px) {
+  .page-centered-element {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+  .slide{
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .login{
+    margin-top: 0px
+  }
+.formulair{
+margin-bottom: 200px;
+}
+
+.content {
+  text-align: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+
+  .buttons-container {
+    margin-top: 30px;
+  }
+  ion-button{
+      width: 300px;
+  }
+}
+
+ion-slides {
+  height: 250px;
+ 
+  bottom: 0;
+
+  ion-slide  {
+    width: 50px;
+      color: #fff;
+    
+  }
+
+  h4 {
+      font-weight: bold;
+  }
+
+
+}
+
+}
+
+
+@media only screen and (max-width: 600px )and (min-height : 700px) {
+  .page-centered-element {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+  .slide{
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .login{
+    margin-top: 0px
+  }
+.formulair{
+margin-bottom: 200px;
+}
+
+.content {
+  text-align: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+
+  .buttons-container {
+    margin-top: 30px;
+  }
+  ion-button{
+      width: 300px;
+  }
+}
+
+ion-slides {
+  height: 250px;
+ 
+  bottom: 0;
+
+  ion-slide  {
+    width: 50px;
+      color: #fff;
+    
+  }
+
+  h4 {
+      font-weight: bold;
+  }
+
+
+}
+
+}
+
